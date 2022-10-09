@@ -32,3 +32,5 @@ SELECT FirstName FROM address_book WHERE city = 'Bhor' or state = 'Maharashtra';
 #UC-7 Ability to understand the size of address book by City
 SELECT count(city) FROM address_book;                                                                                          #size of address book
 
+#UC-8  Ability to retrieve entries sorted alphabetically by Person’s name for a given city
+SELECT FirstName FROM address_book where city='Bhor' or state = 'Maharashtra' order by FirstName; 
