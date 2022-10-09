@@ -19,4 +19,8 @@ email VARCHAR(150) NOT NULL, PRIMARY KEY (id) );
 #UC-3 Ability to insert new Contacts to Address Book
 INSERT INTO address_book (FirstName,LastName,Address,city,state,zip,MobileNo,email ) VALUES ('Sidhodhan','Kamble','Bholawade','Bhor','Maharashtra','412206','9309951144','sid@gmail.com');
 
+#UC-4 Ability to edit existing contact person using their name
+UPDATE address_book set email ='sidhodhank2018@gmail.com' where FirstName = 'Sidhodhan';     #Edit email by using name
+
+
 
