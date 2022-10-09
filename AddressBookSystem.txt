@@ -1,1 +1,6 @@
 *Welcome in Address Book System Using Mysql*
+
+#UC-1  Ability to create a Address Book Service DB
+CREATE DATABASE address_book_service;                   #Create Database
+
+
