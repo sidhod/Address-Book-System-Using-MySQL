@@ -16,5 +16,7 @@ state VARCHAR(150) NOT NULL, zip Long NOT NULL,
 MobileNO VARCHAR(150) NOT NULL,
 email VARCHAR(150) NOT NULL, PRIMARY KEY (id) );
 
+#UC-3 Ability to insert new Contacts to Address Book
+INSERT INTO address_book (FirstName,LastName,Address,city,state,zip,MobileNo,email ) VALUES ('Sidhodhan','Kamble','Bholawade','Bhor','Maharashtra','412206','9309951144','sid@gmail.com');
 
 
