@@ -24,6 +24,9 @@ INSERT INTO address_book (FirstName,LastName,Address,city,state,zip,MobileNo,ema
 UPDATE address_book set email ='sidhodhank2018@gmail.com' where FirstName = 'Sidhodhan';     #Edit email by using name
 
 #UC-5 Ability to delete a person using person's name
-DELETE FROM address_book WHERE FirstName='shubham';
+DELETE FROM address_book WHERE FirstName='shubham';                                                           #Delete Contact using First Name
+
+#UC-6 Ability to Retrieve Person belonging to a City or State from the Address Book
+SELECT FirstName FROM address_book WHERE city = 'Bhor' or state = 'Maharashtra';                #Retrieve Person using cityorstate
 
 
