@@ -42,5 +42,10 @@ UPDATE address_book set Contact_type='Family' where FirstName = 'Sidhodhan';    
 #UC-10 Ability to get number of contact persons
 SELECT count(Contact_type) FROM address_book where Contact type='Family';  
 
+#UC-11 Ability to add person to both Friend and Family
+INSERT INTO address_book (FirstName,LastName,Address,city,state,zip,MobileNo,email ,Contact_type) VALUES ('Sidhodhan','Kamble','Bholawade','Bhor','Maharashtra','412206','9309951144','sid@gmail.com','Friend');
+
+
+
 
 
