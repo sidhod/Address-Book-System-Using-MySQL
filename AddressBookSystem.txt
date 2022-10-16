@@ -39,3 +39,8 @@ SELECT FirstName FROM address_book where city='Bhor' or state = 'Maharashtra' or
 ALTER TABLE address_book ADD Contact_type VARCHAR(250);                                                     #Add Contact Type Field
 UPDATE address_book set Contact_type='Family' where FirstName = 'Sidhodhan';                          #Update Contact Type
 
+#UC-10 Ability to get number of contact persons
+SELECT count(Contact_type) FROM address_book where Contact type='Family';  
+
+
+
