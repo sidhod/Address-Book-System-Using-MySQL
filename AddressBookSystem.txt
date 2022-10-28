@@ -45,6 +45,28 @@ SELECT count(Contact_type) FROM address_book where Contact type='Family';
 #UC-11 Ability to add person to both Friend and Family
 INSERT INTO address_book (FirstName,LastName,Address,city,state,zip,MobileNo,email ,Contact_type) VALUES ('Sidhodhan','Kamble','Bholawade','Bhor','Maharashtra','412206','9309951144','sid@gmail.com','Friend');
 
+#UC-12 Implement the ER Diagram into address_book_service DB
+--Check Field composite/multivalue/simple
+id- key
+First name- Simple attribute
+Last name- Simple attribute
+address- Composite 
+phone number- Multivalue
+email -Multivalue
+Contact_type- Simple attribute
+#Create Table contact_type
+create table contact_type(ID int not null primary key, Contact_type varchar(255));
+insert into Contact_type values(1, "Family"), (2, "Friend");
+select * from contact_type;
+describe contact_type;
+
+#Create table 
+create table contacts_contact_type(Contact_ID int unsigned , Contact_type varchar(255), Contact_type_ID int NOT NULL, Name varchar(255), FOREIGN KEY(Contact_ID) REFERENCES address_book(id), FOREIGN KEY(contact_type_ID) REFERENCES contact_type(ID));
+insert into contacts_contact_type values(1, "Family", 1, "Sidhodhan"),(3, "Friend", 2, "Sidhodhan"),(2, "Family", 2, "Shubham");
+select * from contacts_contact_type;
+
+
+
 
 
 
